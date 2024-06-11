@@ -1,0 +1,50 @@
+ls - List directory contents.
+cd - Change the current directory.
+pwd - Print the current working directory.
+cp - Copy files or directories.
+mv - Move or rename files or directories.
+rm - Remove files or directories.
+mkdir - Create a new directory.
+rmdir - Remove an empty directory.
+touch - Create an empty file or update file timestamps.
+cat - Concatenate and display file content.
+less - View file content one screen at a time.
+head - Display the first part of a file.
+tail - Display the last part of a file.
+grep - Search text using patterns.
+find - Search for files in a directory hierarchy.
+locate - Find files by name.
+chmod - Change file permissions.
+chown - Change file owner and group.
+ps - Report a snapshot of current processes.
+top - Display tasks and system resource usage.
+kill - Terminate processes by PID.
+killall - Terminate processes by name.
+df - Report file system disk space usage.
+du - Estimate file space usage.
+free - Display memory usage.
+ln - Create hard and symbolic links.
+alias - Create an alias for a command.
+unalias - Remove an alias.
+echo - Display a line of text.
+date - Display or set the system date and time.
+whoami - Display the current user.
+hostname - Show or set the system’s hostname.
+uptime - Show how long the system has been running.
+uname - Print system information.
+man - Display the manual for a command.
+info - Display a command’s info documentation.
+apt-get - Package handling utility for Debian-based systems.
+yum - Package manager for RPM-based distributions.
+rpm - RPM package manager.
+dpkg - Debian package manager.
+tar - Archive files using tar.
+gzip - Compress files using gzip.
+gunzip - Decompress gzip files.
+zip - Package and compress files.
+unzip - Extract compressed files from a ZIP archive.
+ssh - OpenSSH client (remote login program).
+scp - Secure copy files between hosts.
+rsync - Remote file and directory synchronization.
+wget - Retrieve files from the web.
+curl - Transfer data from or to a server using various protocols.
