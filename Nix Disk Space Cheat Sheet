@@ -1,0 +1,16 @@
+
+Check Disk Space
+df - Report file system disk space usage.
+Syntax: df [options] [file]
+
+Find Largest Folders
+du - Estimate file space usage.
+Syntax: du [options] [file]
+du -h /path/to/directory
+
+combine du with sort and head.
+du -ah /path/to/directory | sort -rh | head -n 10
+
+du -ah /path/to/directory: Calculate disk usage for all files and folders in the specified directory, with human-readable output.
+sort -rh: Sort the output in reverse order (largest to smallest) and in human-readable format.
+head -n 10: Display the top 10 results.
