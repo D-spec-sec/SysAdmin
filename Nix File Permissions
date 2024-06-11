@@ -1,0 +1,76 @@
+Symbolic Representation
+The symbolic representation of file permissions consists of 10 characters. The first character represents the file type, and the remaining nine characters represent the permissions for the owner, group, and others.
+
+File Type Character
+- : Regular file
+d : Directory
+l : Symbolic link
+c : Character device
+b : Block device
+s : Socket
+p : Named pipe (FIFO)
+
+Permission Characters
+r : Read permission
+w : Write permission
+x : Execute permission
+- : No permission
+
+Permissions are divided into three sets, each containing three characters:
+Owner (User) Permissions
+Group Permissions
+Others (World) Permissions
+Example: -rwxr-xr--
+- : Regular file
+rwx : Read, write, and execute permissions for the owner
+r-x : Read and execute permissions for the group
+r-- : Read permission for others
+
+Octal (Numeric) Representation
+4 : Read permission (r)
+2 : Write permission (w)
+1 : Execute permission (x)
+0 : No permission (-)
+
+The digits are added together to form the final permission value:
+7 : Read (4) + Write (2) + Execute (1) = rwx
+6 : Read (4) + Write (2) = rw-
+5 : Read (4) + Execute (1) = r-x
+4 : Read (4) = r--
+3 : Write (2) + Execute (1) = -wx
+2 : Write (2) = -w-
+1 : Execute (1) = --x
+0 : No permissions = ---
+Example: 755
+7 : rwx (owner)
+5 : r-x (group)
+5 : r-x (others)
+
+Common Commands for Managing Permissions
+chmod - Change the file mode (permissions)
+chmod 755 filename : Sets the permissions to rwxr-xr-x
+chmod u+x filename : Adds execute permission for the owner
+chmod g-w filename : Removes write permission for the group
+chown - Change the file owner and group
+chown user:group filename : Changes the owner to user and the group to group
+chgrp - Change the group ownership
+chgrp group filename : Changes the group to group
+umask - Set the default file creation permissions
+
+umask 022 : Sets default permissions to 755 for new files (full access for owner, read and execute for others)
+Special Permissions
+Setuid (Set User ID) - Allows users to run an executable with the permissions of the executable's owner.
+
+Symbol: s (in place of x for the owner)
+Octal: 4 (prefix)
+Example: chmod 4755 filename
+Setgid (Set Group ID) - Allows users to run an executable with the permissions of the executable's group or ensures new files in a directory inherit the group of the directory.
+
+Symbol: s (in place of x for the group)
+Octal: 2 (prefix)
+Example: chmod 2755 directory
+Sticky Bit - Ensures that only the file's owner can delete or rename the files within a directory.
+
+Symbol: t (in place of x for others)
+Octal: 1 (prefix)
+Example: chmod 1777 directory
