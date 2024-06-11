@@ -1,0 +1,66 @@
+
+Navigation
+Ctrl + A - Move the cursor to the beginning of the line.
+Ctrl + E - Move the cursor to the end of the line.
+Ctrl + F - Move the cursor forward one character.
+Ctrl + B - Move the cursor backward one character.
+Alt + F - Move the cursor forward one word.
+Alt + B - Move the cursor backward one word.
+Ctrl + XX - Toggle between the start of the line and the current cursor position.
+
+Editing
+Ctrl + U - Cut (kill) the text from the cursor to the beginning of the line.
+Ctrl + K - Cut (kill) the text from the cursor to the end of the line.
+Ctrl + W - Cut (kill) the word before the cursor.
+Alt + D - Cut (kill) the word after the cursor.
+Ctrl + Y - Paste (yank) the last cut text.
+Ctrl + _ or Ctrl + / - Undo the last action.
+Alt + T - Swap the current word with the previous word.
+Ctrl + T - Swap the last two characters before the cursor.
+Alt + U - Capitalize the current word from the cursor to the end.
+Alt + L - Lowercase the current word from the cursor to the end.
+Alt + C - Capitalize the character under the cursor and move to the end of the word.
+
+Process Control
+Ctrl + C - Interrupt (kill) the current process.
+Ctrl + Z - Suspend the current process.
+Ctrl + D - Log out of the current shell session or close the terminal.
+Ctrl + L - Clear the terminal screen.
+Ctrl + S - Stop all output to the terminal.
+Ctrl + Q - Resume output to the terminal.
+
+Command History
+Ctrl + R - Search backward through command history.
+Ctrl + G - Exit history search mode.
+Ctrl + P - Previous command in history.
+Ctrl + N - Next command in history.
+Alt + . - Use the last argument of the previous command.
+
+Autocompletion
+Tab - Autocomplete file or directory names.
+Alt + ? - Display list of possible completions.
+
+Miscellaneous
+Ctrl + Alt + T - Open a new terminal window.
+Ctrl + Shift + T - Open a new tab in the terminal.
+Ctrl + Shift + W - Close the current terminal tab.
+Ctrl + Shift + C - Copy selected text to clipboard.
+Ctrl + Shift + V - Paste clipboard text into the terminal.
+Ctrl + Left/Right Arrow - Move cursor to the start of the previous/next word.
+Shift + Page Up/Page Down - Scroll up/down the terminal output.
+Ctrl + Alt + F1 to F6 - Switch to different virtual console terminals.
+Ctrl + Alt + F7 - Switch back to the graphical interface (GUI).
+
+Specific Shell Shortcuts (Bash)
+Ctrl + X, Ctrl + E - Open the current command in the default editor.
+Alt + R - Revert any changes made to the current command.
+Alt + . - Insert the last argument of the previous command (same as Alt + _).
+Ctrl + O - Execute the current command and fetch the next from the history.
+Ctrl + J - Similar to Enter, execute the current command.
+
+Terminal Multiplexer (tmux) Shortcuts
+Ctrl + B, % - Split the current pane vertically.
+Ctrl + B, " - Split the current pane horizontally.
+Ctrl + B, Arrow Key - Move between panes.
+Ctrl + B, C - Create a new window.
+Ctrl + B, N - Move to the next window.
