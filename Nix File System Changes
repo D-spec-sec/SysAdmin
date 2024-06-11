@@ -1,0 +1,33 @@
+Find Files Modified in the Last N Days:
+find /path/to/search -type f -mtime -N
+Mniutes: 
+find / -type f -mmin -60
+
+
+inotifywatch and inotifywait can be used to monitor file changes.
+sudo apt-get install inotify-tools  # For Debian/Ubuntu
+sudo yum install inotify-tools      # For CentOS/RHEL
+
+inotifywait -m /path/to/directory
+
+
+
+ auditd (Audit Daemon) service can be used to monitor and track system events, including file modifications.
+sudo apt-get install auditd  # For Debian/Ubuntu
+sudo yum install auditd      # For CentOS/RHEL
+
+Rule to monitor changes:
+sudo auditctl -w /path/to/directory -p wa -k watch_modify
+-w /path/to/directory: Specify the directory or file to watch.
+-p wa: Watch for write and attribute change events.
+-k watch_modify: Specify a key name for the rule.
+
+Audit Logs: 
+sudo ausearch -k watch_modify
+
+Files modified by user: 
+find / -type f -user username -mtime -7
+
+Set up auditd to watch a directory:
+sudo auditctl -w /etc -p wa -k watch_modify
+sudo ausearch -k watch_modify
